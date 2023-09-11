@@ -33,7 +33,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Apply a binary callback to elements in five-dimensional nested input arrays and assign results to elements in a five-dimensional nested output array.
+> Apply a binary callback to elements in two five-dimensional nested input arrays and assign results to elements in a five-dimensional nested output array.
 
 <section class="intro">
 
@@ -41,43 +41,35 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-base-binary5d
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-binary5d = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-binary5d@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var binary5d = require( 'path/to/vendor/umd/array-base-binary5d/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-binary5d@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.binary5d;
-})();
-</script>
+var binary5d = require( '@stdlib/array-base-binary5d' );
 ```
 
 #### binary5d( arrays, shape, fcn )
 
-Applies a binary callback to elements in five-dimensional nested input arrays and assigns results to elements in a five-dimensional nested output array.
+Applies a binary callback to elements in two five-dimensional nested input arrays and assigns results to elements in a five-dimensional nested output array.
 
 ```javascript
 var add = require( '@stdlib/math-base-ops-add' );
@@ -118,13 +110,8 @@ The function accepts the following arguments:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {.factory;
+```javascript
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
 var filled5dBy = require( '@stdlib/array-base-filled5d-by' );
 var zeros5d = require( '@stdlib/array-base-zeros5d' );
 var add = require( '@stdlib/math-base-ops-add' );
@@ -143,11 +130,6 @@ console.log( z );
 
 binary5d( [ x, y, z ], shape, add );
 console.log( z );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
