@@ -74,7 +74,7 @@ var binary5d = require( '@stdlib/array-base-binary5d' );
 Applies a binary callback to elements in two five-dimensional nested input arrays and assigns results to elements in a five-dimensional nested output array.
 
 ```javascript
-var add = require( '@stdlib/math-base-ops-add' );
+var add = require( '@stdlib/number-float64-base-add' );
 var zeros5d = require( '@stdlib/array-base-zeros5d' );
 
 var x = [ [ [ [ [ 1.0, 2.0 ], [ 3.0, 4.0 ] ] ] ] ];
@@ -116,7 +116,7 @@ The function accepts the following arguments:
 var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
 var filled5dBy = require( '@stdlib/array-base-filled5d-by' );
 var zeros5d = require( '@stdlib/array-base-zeros5d' );
-var add = require( '@stdlib/math-base-ops-add' );
+var add = require( '@stdlib/number-float64-base-add' );
 var binary5d = require( '@stdlib/array-base-binary5d' );
 
 var shape = [ 1, 2, 2, 3, 3 ];
@@ -172,7 +172,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
